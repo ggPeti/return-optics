@@ -86,3 +86,7 @@ refracto opt mergeBack fx (( model, cmd ) as return) =
                 >> Return.command cmd
             )
         |> Maybe.withDefault return
+
+
+flip : (a -> b -> c) -> b -> a -> c
+flip f a b = f b a
